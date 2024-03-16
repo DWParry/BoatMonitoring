@@ -66,8 +66,9 @@ def logFileTimerTrue(timer):
     logFileTimerFlag = True
 
 logFileTimerFlag=False
+logInterval = 60000 #milliseconds
 logTimer = Timer()
-logTimer.init(mode = Timer.PERIODIC, callback = logFileTimerTrue, period = 10000)
+logTimer.init(mode = Timer.PERIODIC, callback = logFileTimerTrue, period = logInterval)
 
 connection = False
 lastReadingsValues = None
